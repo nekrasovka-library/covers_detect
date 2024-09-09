@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  image_processor:
+    build: .
+    container_name: image_processor_1
+    volumes:
+      - ./:/workdir
+    restart: "no"
+
+
+# version: '3.7'
+
+# services:
+#   server:
+#     image: covers-detector
+#     build: .
+#     volumes:
+#       - ./:/workdir
+#     ports:
+#       - 8858:8888
+#       - 5005:5005
+#     privileged: true
+#     stdin_open: true # docker run -i
+#     tty: true        # docker run -t
+#     restart: unless-stopped

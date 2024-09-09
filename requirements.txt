@@ -1,0 +1,11 @@
+matplotlib
+scipy
+tqdm
+opencv-python
+numpy
+scikit-image
+torchvision
+timm
+git+https://github.com/ChaoningZhang/MobileSAM.git
+rembg
+scikit-learn
