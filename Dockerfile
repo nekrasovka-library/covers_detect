@@ -1,7 +1,6 @@
 FROM python:3.9-slim
 WORKDIR /
 
-# TZ setup
 ARG TZ=Europe/Moscow
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 

@@ -53,13 +53,3 @@ def process_images(input_dir: str, output_dir: str, error_dir: str, history_dir:
 
 if __name__ == "__main__":
     process_images(input_dir, output_dir, error_dir, history_dir, detailed=DETAILED)
-
-
-
-
-
-
-
-
-
-
