@@ -6,10 +6,14 @@ import numpy as np
 from PIL import Image
 
 DETAILED = False
-input_dir = './workdir/data/input'
-output_dir = './workdir/data/processed'
-error_dir = './workdir/data/errors'
-history_dir = './workdir/data/history'
+# input_dir = './workdir/data/input'
+# output_dir = './workdir/data/processed'
+# error_dir = './workdir/data/errors'
+# history_dir = './workdir/data/history'
+input_dir = './data/input'
+output_dir = './data/processed'
+error_dir = './data/errors'
+history_dir = './data/history'
 MODEL_TYPE_1 = 'unet'
 MODEL_TYPE_2 = 'sam'
 
