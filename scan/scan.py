@@ -21,7 +21,7 @@ from scan.sam import Sam
 # SAM = None
 # BackgroundRemover = None
 
-CHECKPOINT_PATH = './workdir/weights/mobile_sam.pt'
+CHECKPOINT_PATH = '/workdir/weights/mobile_sam.pt'
 SAM = Sam(checkpoint_path = CHECKPOINT_PATH)
 
 BackgroundRemover = BackgroundRemover()

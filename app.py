@@ -6,14 +6,14 @@ import numpy as np
 from PIL import Image
 
 DETAILED = False
-# input_dir = './workdir/data/input'
-# output_dir = './workdir/data/processed'
-# error_dir = './workdir/data/errors'
-# history_dir = './workdir/data/history'
-input_dir = './data/input'
-output_dir = './data/processed'
-error_dir = './data/errors'
-history_dir = './data/history'
+input_dir = '/workdir/data/input'
+output_dir = '/workdir/data/processed'
+error_dir = '/workdir/data/errors'
+history_dir = '/workdir/data/history'
+# input_dir = './data/input'
+# output_dir = './data/processed'
+# error_dir = './data/errors'
+# history_dir = './data/history'
 MODEL_TYPE_1 = 'unet'
 MODEL_TYPE_2 = 'sam'
 
@@ -36,6 +36,7 @@ def ensure_directories(*dirs):
     
 def process_images(input_dir: str, output_dir: str, error_dir: str, history_dir: str, detailed: bool = DETAILED):
     ensure_directories(output_dir, error_dir, history_dir)
+    print("LIST OF FILES", os.listdir(input_dir))
     for filename in os.listdir(input_dir):
         if filename.lower().endswith(('.jpg', '.png')):
             input_path = os.path.join(input_dir, filename)
@@ -54,6 +55,7 @@ def process_images(input_dir: str, output_dir: str, error_dir: str, history_dir:
                     print(f"Error processing {filename}, saved to errors")
 
 
-
+print('Starting app.py')
 if __name__ == "__main__":
+    print('START process_images')
     process_images(input_dir, output_dir, error_dir, history_dir, detailed=DETAILED)
